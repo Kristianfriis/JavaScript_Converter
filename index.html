@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css"
+    </head>
+    
+    <body>
+        <div id="container">
+            <h1>DKK til DKK</h1>
+            <input placeholder="indtast danske kroner" type="text" id="dkk">
+            <input placeholder="omregnet til Euro" type="text" id="euro">
+            <button id="btnDkk" onclick="omregnDkk()">Omregn til Euro</button>
+            <button id="btnEuro" onclick="omregnEuro()">Omregn til DKK</button>
+            <button is="nulstil" onclick="nulstil()">Nulstil</button>
+        </div>
+     
+    <script type="text/javascript">
+        
+        function omregnDkk () {
+            var dkk = Number(document.getElementById("dkk").value);
+            var euro = dkk * 7.45;
+            document.getElementById("euro").value = euro;
+}
+        
+        function omregnEuro () {
+            var euro = Number(document.getElementById("euro").value);
+            var dkk = euro / 7.45;
+            document.getElementById("dkk").value = dkk;
+}
+        function nulstil() {
+            document.getElementById("dkk").value = " ";
+            document.getElementById("euro").value = " ";
+        }
+    </script>
+    </body>
+</html>
